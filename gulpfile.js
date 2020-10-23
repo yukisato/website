@@ -18,7 +18,7 @@ const css = () =>
   src("src/scss/**/*.scss")
     .pipe(
       sass({
-        outputStyle: "expanded"
+        outputStyle: "compressed"
       }).on("error", sass.logError)
     )
     .pipe(autoprefixer({ grid: true }))
