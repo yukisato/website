@@ -19,6 +19,7 @@
     "gulp-ejs": "^5.1.0",
     "gulp-footer": "^2.0.2",
     "gulp-header": "^2.0.9",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0"
   },
   "scripts": {

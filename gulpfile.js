@@ -1,8 +1,9 @@
 const { src, dest, parallel, watch } = require("gulp");
 const rename = require("gulp-rename");
 const ejs = require("gulp-ejs");
-const header = require('gulp-header');
-const footer = require('gulp-footer');
+const htmlmin = require("gulp-htmlmin");
+const header = require("gulp-header");
+const footer = require("gulp-footer");
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
 const changed = require("gulp-changed");
@@ -14,22 +15,23 @@ const browserSync = require("browser-sync").create();
 
 const html = () =>
   src(["./src/ejs/**/*.ejs", "!" + "./src/ejs/**/_*.ejs"])
-    .pipe(ejs({},{},{ ext: ".html" }))
+    .pipe(ejs({}, {}, { ext: ".html" }))
     .pipe(rename({ extname: ".html" }))
+    .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
     .pipe(dest("./docs"));
 
 const css = () =>
   src("./src/scss/**/*.scss")
     .pipe(
       sass({
-        outputStyle: "compressed"
+        outputStyle: "compressed",
       }).on("error", sass.logError)
     )
     .pipe(autoprefixer({ grid: true }))
-    .pipe(header('<style>'))
-    .pipe(footer('</style>'))
-    .pipe(rename('_style.ejs'))
-    .pipe(dest('./src/ejs'))
+    .pipe(header("<style>"))
+    .pipe(footer("</style>"))
+    .pipe(rename("_style.ejs"))
+    .pipe(dest("./src/ejs"))
     .pipe(browserSync.stream());
 
 const image = () =>
@@ -42,8 +44,8 @@ const image = () =>
         imageminGif({
           interlaced: false,
           optimizationLevel: 3,
-          colors: 180
-        })
+          colors: 180,
+        }),
       ])
     )
     .pipe(dest("./docs/images"));
@@ -51,8 +53,8 @@ const image = () =>
 const watchFiles = () =>
   browserSync.init({
     server: {
-      baseDir: "./docs"
-    }
+      baseDir: "./docs",
+    },
   });
 watch("./src/ejs/**/*.ejs", html);
 watch("./src/scss/**/*.scss", css);
