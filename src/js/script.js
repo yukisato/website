@@ -61,12 +61,12 @@ window.addEventListener("DOMContentLoaded", function () {
     form.reset();
     button.style = "display: none ";
     status.innerHTML =
-      "<p class='alert alert-warning'>お問い合わせありがとうございます！</p>";
+      "<p class='alert'>お問い合わせありがとうございます！</p>";
   }
 
   function error() {
     status.innerHTML =
-      "<p class='alert alert-warning'>Oops! There was a problem.</p>";
+      "<p class='alert'>Oops! There was a problem.</p>";
   }
 
   // handle the form submission event

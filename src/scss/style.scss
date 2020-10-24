@@ -32,7 +32,7 @@ $border-radius: 0;
 // @import "./node_modules/bootstrap/scss/pagination";
 // @import "./node_modules/bootstrap/scss/badge";
 // @import "./node_modules/bootstrap/scss/jumbotron";
-@import "./node_modules/bootstrap/scss/alert";
+// @import "./node_modules/bootstrap/scss/alert";
 // @import "./node_modules/bootstrap/scss/progress";
 // @import "./node_modules/bootstrap/scss/media";
 // @import "./node_modules/bootstrap/scss/list-group";
@@ -47,7 +47,8 @@ $border-radius: 0;
 // @import "./node_modules/bootstrap/scss/print";
 
 .btn,
-.form-control {
+.form-control,
+.alert {
   border-radius: 0.15rem;
 }
 
@@ -360,4 +361,10 @@ footer {
     color: $body-color;
     z-index: 9999;
   }
+}
+
+.alert {
+  border: solid 1px $primary;
+  color: $primary;
+  padding: 0.75rem 1rem;
 }
