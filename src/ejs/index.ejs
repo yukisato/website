@@ -14,7 +14,7 @@
     <!-- CSS -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap"
-      rel="stylesheet"
+      id="webfont"
     />
     <%- include('_style'); -%>
 
@@ -421,6 +421,13 @@
         };
         xhr.send(data);
       }
+    </script>
+
+    <script>
+      (function () {
+        var webfont = document.getElementById("webfont");
+        webfont.rel = "stylesheet";
+      })();
     </script>
 
     <script
