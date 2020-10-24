@@ -1,10 +1,10 @@
 /* ----------------------------------
   Webフォントの遅延読み込み
 ---------------------------------- */
-(function () {
-  var webfont = document.getElementById("webfont");
+var webfonts = document.querySelectorAll(".webfont");
+webfonts.forEach(function (webfont) {
   webfont.rel = "stylesheet";
-})();
+});
 
 /* ----------------------------------
   スムーズスクロール

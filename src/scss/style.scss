@@ -60,6 +60,7 @@ $border-radius: 0;
 body {
   font-weight: 300;
   line-height: 1.8;
+  font-family: "Noto Sans JP", sans-serif;
   @include media-breakpoint-down(xs) {
     font-size: 0.875rem;
   }
