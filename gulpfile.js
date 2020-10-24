@@ -1,5 +1,8 @@
 const { src, dest, parallel, watch } = require("gulp");
 const rename = require("gulp-rename");
+const ejs = require("gulp-ejs");
+const header = require('gulp-header');
+const footer = require('gulp-footer');
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
 const changed = require("gulp-changed");
@@ -10,19 +13,23 @@ const imageminGif = require("imagemin-gifsicle");
 const browserSync = require("browser-sync").create();
 
 const html = () =>
-  src("./src/*.html")
+  src(["./src/ejs/**/*.ejs", "!" + "./src/ejs/**/_*.ejs"])
+    .pipe(ejs({},{},{ ext: ".html" }))
     .pipe(rename({ extname: ".html" }))
     .pipe(dest("./docs"));
 
 const css = () =>
-  src("src/scss/**/*.scss")
+  src("./src/scss/**/*.scss")
     .pipe(
       sass({
         outputStyle: "compressed"
       }).on("error", sass.logError)
     )
     .pipe(autoprefixer({ grid: true }))
-    .pipe(dest("./docs/css"))
+    .pipe(header('<style>'))
+    .pipe(footer('</style>'))
+    .pipe(rename('_style.ejs'))
+    .pipe(dest('./src/ejs'))
     .pipe(browserSync.stream());
 
 const image = () =>
@@ -47,7 +54,7 @@ const watchFiles = () =>
       baseDir: "./docs"
     }
   });
-watch("./src/*.html", html);
+watch("./src/ejs/**/*.ejs", html);
 watch("./src/scss/**/*.scss", css);
 watch("./src/images/**/*", image);
 watch("./docs/**/*").on("change", browserSync.reload);
@@ -56,4 +63,4 @@ exports.html = html;
 exports.css = css;
 exports.image = image;
 exports.watchFiles = watchFiles;
-exports.default = parallel(html, css, image, watchFiles);
+exports.default = parallel(css, html, image, watchFiles);
