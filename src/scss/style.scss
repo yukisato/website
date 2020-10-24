@@ -55,11 +55,7 @@ $border-radius: 0;
   transition-duration: 0.1s;
 }
 
-// @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap");
-
 body {
-  // font-family: "Noto Sans JP", sans-serif;
   font-weight: 300;
   line-height: 1.8;
 }
@@ -201,8 +197,6 @@ header {
   img {
     width: 200px;
     filter: grayscale(80%) contrast(120%);
-    // object-fit: cover;
-    // border-radius: 100%;
   }
   &:hover {
     img {
@@ -246,7 +240,6 @@ header {
   .btn {
     position: relative;
     z-index: 1;
-    // background: linear-gradient(to right, #d00, #00d);
     background: linear-gradient(-45deg, #e73c7e, #23a6d5);
     font-weight: 300;
     border: 0;
