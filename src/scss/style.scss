@@ -20,8 +20,8 @@ $border-radius: 0;
 // @import "./node_modules/bootstrap/scss/tables";
 @import "./node_modules/bootstrap/scss/forms";
 @import "./node_modules/bootstrap/scss/buttons";
-// @import "./node_modules/bootstrap/scss/transitions";
-// @import "./node_modules/bootstrap/scss/dropdown";
+@import "./node_modules/bootstrap/scss/transitions";
+@import "./node_modules/bootstrap/scss/dropdown";
 // @import "./node_modules/bootstrap/scss/button-group";
 // @import "./node_modules/bootstrap/scss/input-group";
 // @import "./node_modules/bootstrap/scss/custom-forms";
@@ -51,13 +51,17 @@ $border-radius: 0;
   border-radius: 0.15rem;
 }
 
-.fade {
+.fade,
+.collapse {
   transition-duration: 0.1s;
 }
 
 body {
   font-weight: 300;
   line-height: 1.8;
+  @include media-breakpoint-down(xs) {
+    font-size: 0.875rem;
+  }
 }
 
 h1,
@@ -78,6 +82,11 @@ header {
       font-family: "Montserrat", sans-serif;
       font-weight: 600;
     }
+    .navbar-nav {
+      @include media-breakpoint-down(xs) {
+        padding: 2rem 0;
+      }
+    }
     .nav-link {
       color: #fff;
       display: block;
@@ -85,8 +94,24 @@ header {
       &:hover {
         text-decoration: underline;
       }
+      @include media-breakpoint-down(xs) {
+        font-size: 1.125rem;
+        text-align: center;
+        padding: 1rem;
+      }
     }
   }
+}
+
+.navbar-toggler {
+  padding: 0.25rem;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar-collapse {
+  background-color: $body-bg;
+  z-index: 1;
 }
 
 #hero {
@@ -97,10 +122,16 @@ header {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
+  padding-top: 62px;
   color: #fff;
   .hero__tagline {
     font-size: 1.125rem;
     letter-spacing: 1px;
+    line-height: 1.4;
+    @include media-breakpoint-down(xs) {
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
   }
   .hero__btn {
     margin-top: 5rem;
@@ -109,6 +140,9 @@ header {
       &:hover {
         background-color: rgba(255, 255, 255, 0.5);
         color: $body-bg;
+      }
+      @include media-breakpoint-down(xs) {
+        font-size: 1rem;
       }
     }
   }
@@ -132,6 +166,9 @@ header {
   position: relative;
   height: 5rem;
   line-height: 1;
+  @include media-breakpoint-down(xs) {
+    font-size: 2rem;
+  }
   p {
     .word {
       position: absolute;
@@ -167,6 +204,9 @@ header {
     font-size: 2.5rem;
     margin-bottom: 3rem;
     text-align: center;
+    @include media-breakpoint-down(xs) {
+      font-size: 1.875rem;
+    }
   }
   h2 + p {
     max-width: 800px;
@@ -175,12 +215,18 @@ header {
   }
   h3 {
     font-size: 1.5rem;
+    @include media-breakpoint-down(xs) {
+      font-size: 1.25rem;
+    }
   }
 }
 
 .member__item {
   max-width: 400px;
   margin: 0 3rem;
+  @include media-breakpoint-down(xs) {
+    margin: 0 0 3rem 0;
+  }
   h3 {
     margin-bottom: 1rem;
     small {
@@ -224,6 +270,9 @@ header {
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 50px;
   grid-row-gap: 50px;
+  @include media-breakpoint-down(xs) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .service__image {
@@ -264,6 +313,9 @@ header {
     &:hover::before {
       opacity: 0.3;
     }
+    @include media-breakpoint-down(xs) {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -292,8 +344,20 @@ footer {
 .modal-content {
   background-color: $body-bg;
   padding: 2rem;
+  @include media-breakpoint-down(xs) {
+    padding: 2rem 0;
+    font-size: 0.812rem;
+  }
+  h2 {
+    @include media-breakpoint-down(xs) {
+      font-size: 1.5rem;
+    }
+  }
   h3 {
     font-size: 1.25rem;
+    @include media-breakpoint-down(xs) {
+      font-size: 1rem;
+    }
   }
   p + h3,
   ul + h3 {
