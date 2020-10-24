@@ -20,13 +20,13 @@ $border-radius: 0;
 // @import "./node_modules/bootstrap/scss/tables";
 @import "./node_modules/bootstrap/scss/forms";
 @import "./node_modules/bootstrap/scss/buttons";
-@import "./node_modules/bootstrap/scss/transitions";
-@import "./node_modules/bootstrap/scss/dropdown";
+// @import "./node_modules/bootstrap/scss/transitions";
+// @import "./node_modules/bootstrap/scss/dropdown";
 // @import "./node_modules/bootstrap/scss/button-group";
 // @import "./node_modules/bootstrap/scss/input-group";
 // @import "./node_modules/bootstrap/scss/custom-forms";
 // @import "./node_modules/bootstrap/scss/nav";
-@import "./node_modules/bootstrap/scss/navbar";
+// @import "./node_modules/bootstrap/scss/navbar";
 // @import "./node_modules/bootstrap/scss/card";
 // @import "./node_modules/bootstrap/scss/breadcrumb";
 // @import "./node_modules/bootstrap/scss/pagination";
@@ -77,15 +77,15 @@ header {
   position: absolute;
   width: 100%;
   .navbar {
-    background-color: transparent !important;
-    h1 {
+    padding: 0 1rem;
+    h1.navbar-brand {
       font-family: "Montserrat", sans-serif;
       font-weight: 600;
+      padding: 1rem 0;
+      font-size: 1.25rem;
     }
-    .navbar-nav {
-      @include media-breakpoint-down(xs) {
-        padding: 2rem 0;
-      }
+    .nav-list {
+      list-style: none;
     }
     .nav-link {
       color: #fff;
@@ -101,17 +101,6 @@ header {
       }
     }
   }
-}
-
-.navbar-toggler {
-  padding: 0.25rem;
-}
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-.navbar-collapse {
-  background-color: $body-bg;
-  z-index: 1;
 }
 
 #hero {
