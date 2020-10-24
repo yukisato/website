@@ -282,6 +282,9 @@ footer {
   padding: 1.5rem 0;
   border-top: solid 1px #2d3748;
   font-size: 0.812rem;
+  a {
+    color: lighten($primary, 10%);
+  }
 }
 
 .modal-content {
