@@ -24,7 +24,7 @@
     "gulp-uglify": "^3.0.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "./node_modules/.bin/gulp"
   },
   "repository": {
     "type": "git",
