@@ -24,7 +24,7 @@
     "gulp-uglify": "^3.0.2"
   },
   "scripts": {
-    "dev": "./node_modules/.bin/gulp"
+    "build": "./node_modules/.bin/gulp"
   },
   "repository": {
     "type": "git",

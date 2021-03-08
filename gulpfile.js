@@ -32,8 +32,7 @@ const css = () =>
     .pipe(header("<style>"))
     .pipe(footer("</style>"))
     .pipe(rename("_style.ejs"))
-    .pipe(dest("./src/ejs"))
-    .pipe(browserSync.stream());
+    .pipe(dest("./src/ejs"));
 
 const js = () =>
   src("./src/js/**/*.js")
@@ -41,8 +40,7 @@ const js = () =>
     .pipe(header("<script>"))
     .pipe(footer("</script>"))
     .pipe(rename("_script.ejs"))
-    .pipe(dest("./src/ejs"))
-    .pipe(browserSync.stream());
+    .pipe(dest("./src/ejs"));
 
 const image = () =>
   src("src/images/**/*.+(jpg|jpeg|png|gif)")
@@ -77,4 +75,5 @@ exports.css = css;
 exports.js = js;
 exports.image = image;
 exports.watchFiles = watchFiles;
-exports.default = parallel(css, js, html, image, watchFiles);
+exports.default = parallel(css, js, html, image);
+exports.dev = parallel(css, js, html, image, watchFiles);
