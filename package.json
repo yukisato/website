@@ -3,28 +3,29 @@
   "version": "1.0.0",
   "description": "Site repository for JP Web Solutions",
   "main": "gulpfile.js",
-  "dependencies": {
+  "devDependencies": {
     "bootstrap": "^4.5.3",
     "browser-sync": "^2.26.13",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
-    "imagemin-gifsicle": "^7.0.0",
-    "imagemin-jpeg-recompress": "^7.0.0",
-    "imagemin-pngquant": "^9.0.1"
-  },
-  "devDependencies": {
     "gulp-changed": "^4.0.2",
     "gulp-ejs": "^5.1.0",
+    "gulp-exec": "^5.0.0",
     "gulp-footer": "^2.0.2",
     "gulp-header": "^2.0.9",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
-    "gulp-uglify": "^3.0.2"
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpeg-recompress": "^7.0.0",
+    "imagemin-pngquant": "^9.0.1"
   },
   "scripts": {
-    "build": "./node_modules/.bin/gulp"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "build": "gulp",
+    "dev": "gulp dev"
   },
   "repository": {
     "type": "git",

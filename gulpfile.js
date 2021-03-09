@@ -1,4 +1,4 @@
-const { src, dest, parallel, watch } = require("gulp");
+const { src, dest, series, parallel, watch } = require("gulp");
 const rename = require("gulp-rename");
 const ejs = require("gulp-ejs");
 const htmlmin = require("gulp-htmlmin");
@@ -42,7 +42,7 @@ const js = () =>
     .pipe(rename("_script.ejs"))
     .pipe(dest("./src/ejs"));
 
-const image = () =>
+const image = () => 
   src("src/images/**/*.+(jpg|jpeg|png|gif)")
     .pipe(changed("./docs/images"))
     .pipe(
@@ -75,5 +75,6 @@ exports.css = css;
 exports.js = js;
 exports.image = image;
 exports.watchFiles = watchFiles;
-exports.default = parallel(css, js, html, image);
-exports.dev = parallel(css, js, html, image, watchFiles);
+
+exports.default = series(css, js, image, html);
+exports.dev = series( css, js, image, html, watchFiles);
