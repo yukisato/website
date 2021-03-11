@@ -46,6 +46,14 @@
   <!-- CSS -->
   <%- include('_style'); -%>
 
+  <!-- ReCaptcha v3 -->
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+    function submitForm(token) {
+      document.getElementById("my-form").submit();
+    }
+  </script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EN7C1MVV3J"></script>
   <script>
@@ -238,6 +246,10 @@
         </div>
         <div class="text-center mb-4">
           <button id="my-form-button" class="btn btn-lg btn-primary">
+          <button id="my-form-button" class="g-recaptcha btn btn-lg btn-primary"
+            data-sitekey="6LcQrHsaAAAAAIJuuvHgxyPLFpDEvgzfkK7QJOj3" 
+            data-callback='submitForm' 
+            data-action='submit'>
             送信する
           </button>
         </div>
