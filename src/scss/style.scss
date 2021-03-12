@@ -391,37 +391,14 @@ footer {
 .canada-school {
   background-color: #e0f1f9;
 }
-.canada-school-image {
-  background-image: url(./images/canada-school.png);
-  background-position: right center;
-}
 .momose-coaching {
   background-color: #ffe655;
   background-image: url(./images/momose-coaching-bg.png);
   background-size: cover;
   background-position: center;
 }
-.momose-coaching-image {
-  background-position: left center;
-  &.lazy-background {
-    background-image: url(./images/placeholder-image@2x.png);
-  }
-  &.lazy-background.visible {
-    background-image: url(./images/momose-coaching@2x.png);
-  }
-}
 .compass-management {
   background-color: #222222;
-  // background-image: url(./images/compass-management-bg.png);
-  // background-size: cover;
-  // background-position: center;
-}
-.compass-management-image {
-  background-image: url(./images/compass-management@2x.png);
-  background-position: right center;
-  .featured-project {
-    background-color: $body-color;
-  }
 }
 
 .work__bg {
@@ -436,6 +413,30 @@ footer {
   }
   @include media-breakpoint-down(sm) {
     background: none !important;
+  }
+  &.lazy-background {
+    background-image: url(./images/placeholder-image.png);
+  }
+  &.canada-school-image {
+    background-position: right center;
+    &.lazy-background.visible {
+      background-image: url(./images/canada-school@2x.png);
+    }
+  }
+  &.momose-coaching-image {
+    background-position: left center;
+    &.lazy-background.visible {
+      background-image: url(./images/momose-coaching@2x.png);
+    }
+  }
+  &.compass-management-image {
+    background-position: right center;
+    &.lazy-background.visible {
+      background-image: url(./images/compass-management@2x.png);
+    }
+    .featured-project {
+      background-color: $body-color;
+    }
   }
 }
 
