@@ -388,18 +388,6 @@ footer {
   background-color: $body-bg;
   font-family: "Montserrat", sans-serif;
 }
-.canada-school {
-  background-color: #e0f1f9;
-}
-.momose-coaching {
-  background-color: #ffe655;
-  background-image: url(./images/momose-coaching-bg.png);
-  background-size: cover;
-  background-position: center;
-}
-.compass-management {
-  background-color: #222222;
-}
 
 .work__bg {
   min-height: 500px;
@@ -461,6 +449,40 @@ footer {
   .work__image {
     img {
       max-width: 280px;
+    }
+  }
+  .work__list {
+    padding-left: 1.5rem;
+    li {
+      padding: 0.1rem 0;
+      font-size: 0.937rem;
+      span {
+        color: $body-bg;
+      }
+    }
+  }
+  .canada-school {
+    background-color: #e0f1f9;
+    .work__list {
+      color: #cf000e;
+    }
+  }
+  .momose-coaching {
+    background-color: #ffe655;
+    background-image: url(./images/momose-coaching-bg.png);
+    background-size: cover;
+    background-position: center;
+    .work__list {
+      color: #e73c7e;
+    }
+  }
+  .compass-management {
+    background-color: #222222;
+    .work__list {
+      color: #2e75d4;
+      span {
+        color: #fff;
+      }
     }
   }
 }
