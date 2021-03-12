@@ -3,6 +3,7 @@ $body-bg: #1a202c;
 $body-color: #cbd5e0;
 $pink: #e73c7e;
 $primary: $pink;
+$dark: $body-bg;
 $border-radius: 0;
 
 // Required
@@ -45,6 +46,19 @@ $border-radius: 0;
 // @import "./node_modules/bootstrap/scss/spinners";
 @import "./node_modules/bootstrap/scss/utilities";
 // @import "./node_modules/bootstrap/scss/print";
+
+.container-xl {
+  max-width: 1140px;
+}
+.container-lg {
+  max-width: 960px;
+}
+.container-md {
+  max-width: 720px;
+}
+.container-sm {
+  max-width: 540px;
+}
 
 .btn,
 .form-control,
@@ -92,7 +106,7 @@ header {
     .nav-link {
       color: #fff;
       display: block;
-      padding: 0.5rem;
+      padding: 0.5rem 0.75rem;
       &:hover {
         text-decoration: underline;
       }
@@ -368,4 +382,90 @@ footer {
   border: solid 1px $primary;
   color: $primary;
   padding: 0.75rem 1rem;
+}
+
+.featured-project {
+  background-color: $body-bg;
+  font-family: "Montserrat", sans-serif;
+}
+.canada-school {
+  background-color: #e0f1f9;
+  .canada-school-image {
+    min-height: 500px;
+    background: url(./images/canada-school.png) no-repeat right center;
+    background-size: 600px;
+  }
+}
+.momose-coaching {
+  background-color: #ffe655;
+  background-image: url(./images/momose-coaching-bg.png);
+  background-size: cover;
+  background-position: center;
+  .momose-coaching-image {
+    min-height: 500px;
+    background: url(./images/momose-coaching.png) no-repeat left center;
+    background-size: 600px;
+  }
+}
+.compass-management {
+  background-color: #222222;
+  // background-image: url(./images/compass-management-bg.png);
+  // background-size: cover;
+  // background-position: center;
+  .compass-management-image {
+    min-height: 500px;
+    background: url(./images/compass-management.png) no-repeat right center;
+    background-size: 600px;
+    .featured-project {
+      background-color: $body-color;
+    }
+  }
+}
+
+.work-right {
+  padding-left: 50%;
+}
+.btn svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+#work {
+  background-color: #fff;
+  background-color: #fff;
+  color: $body-bg;
+  h2,
+  h3 {
+    color: $body-bg;
+  }
+}
+
+#testimonial {
+  // background-color: lighten(#bdc3d8, 18);
+  background-color: #fff;
+  color: $body-bg;
+  h2,
+  h3 {
+    color: $body-bg;
+  }
+}
+
+#testimonial {
+  min-height: 400px;
+  padding-bottom: 8rem;
+}
+.testimonial__logo {
+  img {
+    max-width: 280px;
+  }
+}
+.testimonial__avatar {
+  img {
+    max-width: 60px;
+    border-radius: 100%;
+    object-fit: cover;
+  }
+}
+.testimonial__text {
+  font-size: 1.25rem;
 }
