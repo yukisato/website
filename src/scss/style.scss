@@ -390,21 +390,24 @@ footer {
 }
 .canada-school {
   background-color: #e0f1f9;
-  .canada-school-image {
-    min-height: 500px;
-    background: url(./images/canada-school.png) no-repeat right center;
-    background-size: 600px;
-  }
+}
+.canada-school-image {
+  background-image: url(./images/canada-school.png);
+  background-position: right center;
 }
 .momose-coaching {
   background-color: #ffe655;
   background-image: url(./images/momose-coaching-bg.png);
   background-size: cover;
   background-position: center;
-  .momose-coaching-image {
-    min-height: 500px;
-    background: url(./images/momose-coaching.png) no-repeat left center;
-    background-size: 600px;
+}
+.momose-coaching-image {
+  background-position: left center;
+  &.lazy-background {
+    background-image: url(./images/placeholder-image@2x.png);
+  }
+  &.lazy-background.visible {
+    background-image: url(./images/momose-coaching@2x.png);
   }
 }
 .compass-management {
@@ -412,19 +415,30 @@ footer {
   // background-image: url(./images/compass-management-bg.png);
   // background-size: cover;
   // background-position: center;
-  .compass-management-image {
-    min-height: 500px;
-    background: url(./images/compass-management.png) no-repeat right center;
-    background-size: 600px;
-    .featured-project {
-      background-color: $body-color;
-    }
+}
+.compass-management-image {
+  background-image: url(./images/compass-management@2x.png);
+  background-position: right center;
+  .featured-project {
+    background-color: $body-color;
   }
 }
 
-.work-right {
-  padding-left: 50%;
+.work__bg {
+  min-height: 500px;
+  background-repeat: no-repeat;
+  background-size: 400px;
+  @include media-breakpoint-up(lg) {
+    background-size: 500px;
+  }
+  @include media-breakpoint-up(xl) {
+    background-size: 600px;
+  }
+  @include media-breakpoint-down(sm) {
+    background: none !important;
+  }
 }
+
 .btn svg {
   width: 1rem;
   height: 1rem;
@@ -434,9 +448,19 @@ footer {
   background-color: #fff;
   background-color: #fff;
   color: $body-bg;
-  h2,
-  h3 {
+  h2 {
     color: $body-bg;
+  }
+  .work__image,
+  .work__text {
+    @include media-breakpoint-up(md) {
+      width: 50%;
+    }
+  }
+  .work__image {
+    img {
+      max-width: 280px;
+    }
   }
 }
 

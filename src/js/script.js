@@ -102,26 +102,23 @@ function ajax(method, url, data, success, error) {
 }
 
 /* ----------------------------------
-  Lazy-loading images
+  Lazy-loading background images
 ---------------------------------- */
 document.addEventListener("DOMContentLoaded", function() {
-  var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+  var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
 
   if ("IntersectionObserver" in window) {
-    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+    let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
-          let lazyImage = entry.target;
-          lazyImage.src = lazyImage.dataset.src;
-          lazyImage.srcset = lazyImage.dataset.srcset;
-          lazyImage.classList.remove("lazy");
-          lazyImageObserver.unobserve(lazyImage);
+          entry.target.classList.add("visible");
+          lazyBackgroundObserver.unobserve(entry.target);
         }
       });
     });
 
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage);
+    lazyBackgrounds.forEach(function(lazyBackground) {
+      lazyBackgroundObserver.observe(lazyBackground);
     });
   }
 });

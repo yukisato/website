@@ -133,7 +133,7 @@
               <picture>
                 <source srcset="./images/yuki.webp" type="image/webp" />
                 <source srcset="./images/yuki.jpg" type="image/jpg" />
-                <img src="./images/yuki.jpg" alt="佐藤 悠貴 Chief Web Consultant / Tech Leader" />
+                <img loading="lazy" src="./images/yuki.jpg" alt="佐藤 悠貴 Chief Web Consultant / Tech Leader">
               </picture>
             </div>
             <h3 class="text-center">
@@ -149,7 +149,7 @@
               <picture>
                 <source srcset="./images/ayumi.webp" type="image/webp" />
                 <source srcset="./images/ayumi.jpg" type="image/jpg" />
-                <img src="./images/ayumi.jpg" alt="高橋 あゆみ Creative Director" />
+                <img loading="lazy" src="./images/ayumi.jpg" alt="高橋 あゆみ Creative Director">
               </picture>
             </div>
             <h3 class="text-center">
@@ -173,8 +173,7 @@
         <div class="service__list">
           <div class="service__item">
             <div class="service__image">
-              <img class="lazy" src="./images/placeholder-image.png" data-src="./images/strategy.svg"
-                data-srcset="./images/strategy.svg" alt="Web戦略">
+              <img loading="lazy" src="./images/strategy.svg" alt="Web戦略">
             </div>
             <h3 class="text-center">Web戦略</h3>
             <p>
@@ -183,8 +182,7 @@
           </div>
           <div class="service__item">
             <div class="service__image">
-              <img class="lazy" src="./images/placeholder-image.png" data-src="./images/development.svg"
-                data-srcset="./images/development.svg" alt="Webシステム開発">
+              <img loading="lazy" src="./images/development.svg" alt="Webシステム開発">
             </div>
             <h3 class="text-center">Webシステム開発</h3>
             <p>
@@ -193,8 +191,7 @@
           </div>
           <div class="service__item">
             <div class="service__image">
-              <img class="lazy" src="./images/placeholder-image.png" data-src="./images/design.svg"
-                data-srcset="./images/design.svg" alt="UI/UXデザイン改善">
+              <img loading="lazy" src="./images/design.svg" alt="UI/UXデザイン改善">
             </div>
             <h3 class="text-center">UI/UXデザイン改善</h3>
             <p>
@@ -203,8 +200,7 @@
           </div>
           <div class="service__item">
             <div class="service__image">
-              <img class="lazy" src="./images/placeholder-image.png" data-src="./images/homepage.svg"
-                data-srcset="./images/homepage.svg" alt="ホームページ制作">
+              <img loading="lazy" src="./images/homepage.svg" alt="ホームページ制作">
             </div>
             <h3 class="text-center">ホームページ制作</h3>
             <p>
@@ -213,8 +209,7 @@
           </div>
           <div class="service__item">
             <div class="service__image">
-              <img class="lazy" src="./images/placeholder-image.png" data-src="./images/seo.svg"
-                data-srcset="./images/seo.svg" alt="SEO対策">
+              <img loading="lazy" src="./images/seo.svg" alt="SEO対策">
             </div>
             <h3 class="text-center">SEO対策</h3>
             <p>
@@ -223,8 +218,7 @@
           </div>
           <div class="service__item">
             <div class="service__image">
-              <img class="lazy" src="./images/placeholder-image.png" data-src="./images/branding.svg"
-                data-srcset="./images/branding.svg" alt="ブランディング">
+              <img loading="lazy" src="./images/branding.svg" alt="ブランディング">
             </div>
             <h3 class="text-center">ブランディング</h3>
             <p>
@@ -238,34 +232,51 @@
     <section id="work">
 
       <div class="canada-school">
-        <div class="canada-school-image d-flex align-items-center">
-          <div class="container py-5">
-            <p class="featured-project d-inline-block small text-white px-2 font-weight-bold">Featured Project 1</p>
-            <h2 class="mb-3 font-weight-bold">カナダ留学コンパス</h2>
-            <ul class="mb-4">
-              <li>トップページデザインリニューアル</li>
-              <li>HTML/CSS/Wordpress構造の見直し</li>
-              <li>サイト速度/SEO改善</li>
-              <li>仕事探し掲示版システム開発</li>
-              <li>サーバー/ドメイン移行</li>
-              <li>セキュリティ強化</li>
-            </ul>
-            <a href="https://canada-school.com/" target="_blank" rel="noopener noreferrer"
-              class="btn btn-outline-dark btn-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-              このWebサイトを見る
-            </a>
+        <div class="canada-school-image work__bg d-flex align-items-center">
+          <div class="container py-5 d-md-flex">
+            <div class="order-sm-2 work__image text-center">
+              <picture class="d-md-none">
+                <source srcset="./images/canada-school.webp" type="image/webp" />
+                <source srcset="./images/canada-school.png" type="image/png" />
+                <img loading="lazy" src="./images/canada-school.png" alt="カナダ留学コンパス">
+              </picture>
+            </div>
+            <div class="order-sm-1 work__text">
+              <p class="featured-project d-inline-block small text-white px-2 font-weight-bold">Featured Project 1</p>
+              <h2 class="mb-3 font-weight-bold">カナダ留学コンパス</h2>
+              <ul class="mb-4">
+                <li>トップページデザインリニューアル</li>
+                <li>HTML/CSS/Wordpress構造の見直し</li>
+                <li>サイト速度/SEO改善</li>
+                <li>仕事探し掲示版システム開発</li>
+                <li>学校口コミ評価システム開発</li>
+                <li>サーバー/ドメイン移行</li>
+                <li>セキュリティ強化</li>
+              </ul>
+              <a href="https://canada-school.com/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-dark btn-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                このWebサイトを見る
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="momose-coaching">
-        <div class="momose-coaching-image d-flex align-items-center">
-          <div class="container py-5">
-            <div class="work-right">
+        <div class="momose-coaching-image lazy-background work__bg d-flex align-items-center">
+          <div class="container py-5 d-md-flex">
+            <div class="work__image text-center">
+              <picture class="d-md-none">
+                <source srcset="./images/momose-coaching.webp" type="image/webp" />
+                <source srcset="./images/momose-coaching.png" type="image/png" />
+                <img loading="lazy" src="./images/momose-coaching.png" alt="モモセ英語コーチング">
+              </picture>
+            </div>
+            <div class="work__text">
               <p class="featured-project d-inline-block small text-white px-2 font-weight-bold">Featured Project 2</p>
               <h2 class="mb-3 font-weight-bold">モモセ英語コーチング</h2>
               <ul class="mb-4">
@@ -287,14 +298,23 @@
       </div>
 
       <div class="compass-management">
-        <div class="compass-management-image d-flex align-items-center">
-          <div class="container py-5">
-            <p class="featured-project d-inline-block small px-2 font-weight-bold">Featured Project 3</p>
-            <h2 class="mb-3 font-weight-bold text-white">管理票ツール</h2>
-            <ul class="mb-4 text-white">
-              <li>社内独自のBIツール開発</li>
-              <li>Webアプリケーションデザイン</li>
-            </ul>
+        <div class="compass-management-image work__bg d-flex align-items-center">
+          <div class="container py-5 d-md-flex">
+            <div class="order-sm-2 work__image text-center">
+              <picture class="d-md-none">
+                <source srcset="./images/compass-management.webp" type="image/webp" />
+                <source srcset="./images/compass-management.png" type="image/png" />
+                <img loading="lazy" src="./images/compass-management.png" alt="管理票ツール" />
+              </picture>
+            </div>
+            <div class="order-sm-1 work__text">
+              <p class="featured-project d-inline-block small px-2 font-weight-bold">Featured Project 3</p>
+              <h2 class="mb-3 font-weight-bold text-white">管理票ツール</h2>
+              <ul class="mb-4 text-white">
+                <li>社内独自のBIツール開発</li>
+                <li>Webアプリケーションデザイン</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -311,8 +331,8 @@
             <div class="testimonial__logo">
               <picture>
                 <source srcset="./images/compass-logo.webp" type="image/webp" />
-                <source srcset="./images/compass-logo.png" type="image/jpg" />
-                <img src="./images/compass-logo.png" alt="カナダ留学コンパス" />
+                <source srcset="./images/compass-logo.png" type="image/png" />
+                <img loading="lazy" src="./images/compass-logo.png" alt="カナダ留学コンパス">
               </picture>
             </div>
           </div>
@@ -325,7 +345,7 @@
               <picture>
                 <source srcset="./images/suenaga.webp" type="image/webp" />
                 <source srcset="./images/suenaga.jpg" type="image/jpg" />
-                <img src="./images/suenaga.jpg" alt="末永真一 / CEO, カナダ留学コンパス" />
+                <img loading="lazy" src="./images/suenaga.jpg" alt="末永真一 / CEO, カナダ留学コンパス">
               </picture>
             </div>
             <p class="m-0">末永真一 / <span class="text-secondary">CEO, カナダ留学コンパス</span></p>
