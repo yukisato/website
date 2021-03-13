@@ -33,7 +33,7 @@
           <meta property="og:url" content="<%= url %>" />
           <meta property="og:title" content="<%= title %>" />
           <meta property="og:description" content="<%= description %>" />
-          <meta property="og:image" content="<%= url %>/images/ogp.png" />
+          <meta property="og:image" content="<%= url %>images/ogp.png" />
 
           <!-- Twitter -->
           <meta name="twitter:card" content="summary_large_image" />
@@ -41,7 +41,36 @@
           <meta name="twitter:creator" content="@JPWebSolutionsCA" />
           <meta name="twitter:title" content="<%= title %>" />
           <meta name="twitter:description" content="<%= description %>" />
-          <meta name="twitter:image" content="<%= url %>/images/ogp.png" />
+          <meta name="twitter:image" content="<%= url %>images/ogp.png" />
+
+          <!-- schema.org -->
+          <script type="application/ld+json">
+            {
+              "@context": "http://schema.org",
+              "@type": "WebPage",
+              "mainEntityOfPage":{
+                "@type":"WebPage",
+                "@id":"<%= url %>"
+              },
+              "headline":"<%= title %>",
+              "image": ["<%= url %>images/ogp.png"],
+              "datePublished": "2020-10-23T10:30:00+01:00",
+              "dateModified": "2021-03-12T10:30:00+01:00",
+              "author": {
+                "@type": "Organization",
+                "name": "Yuki Sato, Ayumi Takahashi"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "JP Web Solutions",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "<%= url %>images/ogp.png"
+                }
+              },
+              "description": "<%= description %>"
+            }
+            </script>
 
           <!-- Web Fonts -->
           <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" class="webfont" />
