@@ -389,6 +389,10 @@ footer {
   font-family: "Montserrat", sans-serif;
 }
 
+.lazy-background {
+  background-image: url(./images/placeholder-image.png);
+}
+
 .work__bg {
   min-height: 500px;
   background-repeat: no-repeat;
@@ -401,9 +405,6 @@ footer {
   }
   @include media-breakpoint-down(sm) {
     background: none !important;
-  }
-  &.lazy-background {
-    background-image: url(./images/placeholder-image.png);
   }
   &.canada-school-image {
     background-position: right center;
@@ -469,9 +470,11 @@ footer {
   }
   .momose-coaching {
     background-color: #ffe655;
-    background-image: url(./images/momose-coaching-bg.png);
     background-size: cover;
     background-position: center;
+    &.lazy-background.visible {
+      background-image: url(./images/momose-coaching-bg.png);
+    }
     .work__list {
       color: #e73c7e;
     }
