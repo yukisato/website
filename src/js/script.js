@@ -122,3 +122,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+
+/* ----------------------------------
+  Copyright year
+---------------------------------- */
+const today = new Date();
+const year = today.getFullYear();
+document.querySelector("#copyright-year").innerHTML = year;

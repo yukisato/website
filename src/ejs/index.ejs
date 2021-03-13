@@ -51,14 +51,14 @@
           <%- include('_style'); -%>
 
             <!-- Global site tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-EN7C1MVV3J"></script>
-            <script>
+            <s async src="https://www.googletagmanager.com/gtag/js?id=G-EN7C1MVV3J"></s>
+            <s>
               window.dataLayer = window.dataLayer || [];
               function gtag() { dataLayer.push(arguments); }
               gtag('js', new Date());
 
               gtag('config', 'G-EN7C1MVV3J');
-            </script>
+            </s>
 </head>
 
 <body>
@@ -388,7 +388,9 @@
       <a href="#" data-toggle="modal" data-target="#modalPrivacyPolicy">
         プライバシーポリシー
       </a>
-      <p>© 2020 JP Web Solutions</p>
+      <p>©
+        <span id="copyright-year"></span> JP Web Solutions
+      </p>
     </footer>
 
     <div class="modal fade" id="modalPrivacyPolicy">
