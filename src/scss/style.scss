@@ -207,21 +207,8 @@ header {
   padding: 7.5rem 0;
   h2 {
     font-size: 2.5rem;
-    margin-bottom: 3rem;
-    text-align: center;
     @include media-breakpoint-down(xs) {
       font-size: 1.875rem;
-    }
-  }
-  h2 + p {
-    max-width: 800px;
-    margin: 0 auto 5rem auto;
-    text-align: center;
-  }
-  h3 {
-    font-size: 1.5rem;
-    @include media-breakpoint-down(xs) {
-      font-size: 1.25rem;
     }
   }
 }
