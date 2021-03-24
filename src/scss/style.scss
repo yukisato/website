@@ -412,14 +412,8 @@ footer {
       background-image: url(./images/canada-school@2x.png);
     }
   }
-  &.momose-coaching-image {
-    background-position: left center;
-    &.lazy-background.visible {
-      background-image: url(./images/momose-coaching@2x.png);
-    }
-  }
   &.compass-management-image {
-    background-position: right center;
+    background-position: left center;
     &.lazy-background.visible {
       background-image: url(./images/compass-management@2x.png);
     }
@@ -466,17 +460,6 @@ footer {
     background-color: #e0f1f9;
     .work__list {
       color: #cf000e;
-    }
-  }
-  .momose-coaching {
-    background-color: #ffe655;
-    background-size: cover;
-    background-position: center;
-    &.lazy-background.visible {
-      background-image: url(./images/momose-coaching-bg.png);
-    }
-    .work__list {
-      color: #e73c7e;
     }
   }
   .compass-management {
