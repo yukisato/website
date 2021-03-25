@@ -1,10 +1,10 @@
-const { src, dest, parallel, watch } = require("gulp");
+const { src, dest, series, parallel, watch } = require("gulp");
 const rename = require("gulp-rename");
 const ejs = require("gulp-ejs");
 const htmlmin = require("gulp-htmlmin");
 const header = require("gulp-header");
 const footer = require("gulp-footer");
-const uglify = require("gulp-uglify");
+const uglify = require('gulp-uglify-es').default;
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
 const changed = require("gulp-changed");
@@ -32,8 +32,7 @@ const css = () =>
     .pipe(header("<style>"))
     .pipe(footer("</style>"))
     .pipe(rename("_style.ejs"))
-    .pipe(dest("./src/ejs"))
-    .pipe(browserSync.stream());
+    .pipe(dest("./src/ejs"));
 
 const js = () =>
   src("./src/js/**/*.js")
@@ -41,10 +40,9 @@ const js = () =>
     .pipe(header("<script>"))
     .pipe(footer("</script>"))
     .pipe(rename("_script.ejs"))
-    .pipe(dest("./src/ejs"))
-    .pipe(browserSync.stream());
+    .pipe(dest("./src/ejs"));
 
-const image = () =>
+const image = () => 
   src("src/images/**/*.+(jpg|jpeg|png|gif)")
     .pipe(changed("./docs/images"))
     .pipe(
@@ -77,4 +75,6 @@ exports.css = css;
 exports.js = js;
 exports.image = image;
 exports.watchFiles = watchFiles;
-exports.default = parallel(css, js, html, image, watchFiles);
+
+exports.default = series(css, js, image, html);
+exports.dev = series( css, js, image, html, watchFiles);

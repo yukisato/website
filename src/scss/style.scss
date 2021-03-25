@@ -3,6 +3,7 @@ $body-bg: #1a202c;
 $body-color: #cbd5e0;
 $pink: #e73c7e;
 $primary: $pink;
+$dark: $body-bg;
 $border-radius: 0;
 
 // Required
@@ -41,10 +42,23 @@ $border-radius: 0;
 @import "./node_modules/bootstrap/scss/modal";
 // @import "./node_modules/bootstrap/scss/tooltip";
 // @import "./node_modules/bootstrap/scss/popover";
-// @import "./node_modules/bootstrap/scss/carousel";
+@import "./node_modules/bootstrap/scss/carousel";
 // @import "./node_modules/bootstrap/scss/spinners";
 @import "./node_modules/bootstrap/scss/utilities";
 // @import "./node_modules/bootstrap/scss/print";
+
+.container-xl {
+  max-width: 1140px;
+}
+.container-lg {
+  max-width: 960px;
+}
+.container-md {
+  max-width: 720px;
+}
+.container-sm {
+  max-width: 540px;
+}
 
 .btn,
 .form-control,
@@ -92,9 +106,12 @@ header {
     .nav-link {
       color: #fff;
       display: block;
-      padding: 0.5rem;
+      padding: 0.5rem 0.75rem;
       &:hover {
         text-decoration: underline;
+      }
+      @include media-breakpoint-down(md) {
+        padding: 0.5rem 0.5rem;
       }
       @include media-breakpoint-down(xs) {
         font-size: 1.125rem;
@@ -193,53 +210,47 @@ header {
   padding: 7.5rem 0;
   h2 {
     font-size: 2.5rem;
-    margin-bottom: 3rem;
-    text-align: center;
     @include media-breakpoint-down(xs) {
       font-size: 1.875rem;
     }
   }
-  h2 + p {
-    max-width: 800px;
-    margin: 0 auto 5rem auto;
-    text-align: center;
-  }
-  h3 {
-    font-size: 1.5rem;
-    @include media-breakpoint-down(xs) {
-      font-size: 1.25rem;
-    }
-  }
 }
 
-.member__item {
-  max-width: 400px;
-  margin: 0 3rem;
-  @include media-breakpoint-down(xs) {
-    margin: 0 0 3rem 0;
+.member__container {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  @include media-breakpoint-up(sm) {
+    grid-template-columns: repeat(2, 1fr);
   }
-  h3 {
-    margin-bottom: 1rem;
-    small {
-      font-family: "Montserrat", sans-serif;
-      font-weight: 300;
-      font-size: 1rem;
-      display: block;
-      margin-top: 0.5rem;
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .member__item {
+    max-width: 400px;
+    h3 {
+      margin-bottom: 1rem;
+      small {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+        font-size: 1rem;
+        display: block;
+        margin-top: 0.5rem;
+      }
     }
   }
-}
-.member__image {
-  line-height: 0;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  img {
-    width: 200px;
-    filter: grayscale(80%) contrast(120%);
-  }
-  &:hover {
+  .member__image {
+    line-height: 0;
+    text-align: center;
+    margin-bottom: 1.5rem;
     img {
-      filter: grayscale(0%) contrast(100%);
+      width: 200px;
+      filter: grayscale(80%) contrast(120%);
+    }
+    &:hover {
+      img {
+        filter: grayscale(0%) contrast(100%);
+      }
     }
   }
 }
@@ -253,6 +264,9 @@ header {
   }
   h3 {
     margin-bottom: 1rem;
+    @include media-breakpoint-down(md) {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -369,3 +383,139 @@ footer {
   color: $primary;
   padding: 0.75rem 1rem;
 }
+
+.featured-project {
+  background-color: $body-bg;
+  font-family: "Montserrat", sans-serif;
+}
+
+.lazy-background {
+  background-image: url(./images/placeholder-image.png);
+}
+
+.work__bg {
+  min-height: 500px;
+  background-repeat: no-repeat;
+  background-size: 400px;
+  @include media-breakpoint-up(lg) {
+    background-size: 500px;
+  }
+  @include media-breakpoint-up(xl) {
+    background-size: 600px;
+  }
+  @include media-breakpoint-down(sm) {
+    background: none !important;
+  }
+  &.canada-school-image {
+    background-position: right center;
+    &.lazy-background.visible {
+      background-image: url(./images/canada-school@2x.png);
+    }
+  }
+  &.compass-management-image {
+    background-position: left center;
+    &.lazy-background.visible {
+      background-image: url(./images/compass-management@2x.png);
+    }
+    .featured-project {
+      background-color: $body-color;
+    }
+  }
+}
+
+.btn svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+#work {
+  background-color: #fff;
+  background-color: #fff;
+  color: $body-bg;
+  h2 {
+    color: $body-bg;
+  }
+  .work__image,
+  .work__text {
+    @include media-breakpoint-up(md) {
+      width: 50%;
+    }
+  }
+  .work__image {
+    img {
+      max-width: 280px;
+    }
+  }
+  .work__list {
+    padding-left: 1.5rem;
+    li {
+      padding: 0.1rem 0;
+      // font-size: 0.937rem;
+      span {
+        color: $body-bg;
+      }
+    }
+  }
+  .canada-school {
+    background-color: #e0f1f9;
+    .work__list {
+      color: #cf000e;
+    }
+  }
+  .compass-management {
+    background-color: #222222;
+    .work__list {
+      color: #2e75d4;
+      span {
+        color: #fff;
+      }
+    }
+  }
+}
+
+#testimonial {
+  // background-color: lighten(#bdc3d8, 18);
+  background-color: #fff;
+  color: $body-bg;
+  h2,
+  h3 {
+    color: $body-bg;
+  }
+}
+
+#testimonial {
+  min-height: 400px;
+  padding-bottom: 8rem;
+}
+.testimonial__logo {
+  img {
+    max-width: 280px;
+  }
+}
+.testimonial__avatar {
+  img {
+    max-width: 60px;
+    border-radius: 100%;
+    object-fit: cover;
+  }
+}
+.testimonial__text {
+  font-size: 1.25rem;
+}
+
+.carousel-item {
+  min-height: 300px;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+// .carousel-control-prev {
+//   left: -100px;
+// }
+// .carousel-control-next {
+//   right: -100px;
+// }
