@@ -5,88 +5,94 @@
   <!-- Google Tag Manager (head) -->
   <%- include('_tag_manager', { isInHead: true }); -%>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <% const title='JP Web Solutions - Web戦略、Webシステム開発、UI/UXデザイン改善、ホームページ制作、SEO対策、ブランディング等、デジタル領域に関する課題は全てお任せください' ; %>
-      <% const
-        description='私たちはクライアントのビジネス成果向上を目的に、ホームページの企画・制作からSEO対策、UI/UXデザイン改善、Webシステム開発等を行うカナダ、バンクーバーのデジタルコンサルティングチームです。'
-        ; %>
-        <% const url='https://www.jpweb.ca/' ; %>
+  <% const title='JP Web Solutions - Web戦略、Webシステム開発、UI/UXデザイン改善、ホームページ制作、SEO対策、ブランディング等、デジタル領域に関する課題は全てお任せください' ; %>
+  <% const description='私たちはクライアントのビジネス成果向上を目的に、ホームページの企画・制作からSEO対策、UI/UXデザイン改善、Webシステム開発等を行うカナダ、バンクーバーのデジタルコンサルティングチームです。'; %>
+  <% const url='https://www.jpweb.ca/' ; %>
 
-          <!-- SEO -->
-          <title>
-            <%= title %>
-          </title>
-          <meta name="description" content="<%= description %>" />
+  <!-- SEO -->
+  <title>
+    <%= title %>
+  </title>
+  <meta name="description" content="<%= description %>" />
 
-          <!-- favicon -->
-          <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
-          <link rel="manifest" href="/images/favicon/site.webmanifest" />
-          <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#e73c7e" />
-          <meta name="msapplication-TileColor" content="#e73c7e" />
-          <meta name="theme-color" content="#e73c7e" />
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="/images/favicon/site.webmanifest" />
+  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#e73c7e" />
+  <meta name="msapplication-TileColor" content="#e73c7e" />
+  <meta name="theme-color" content="#e73c7e" />
 
-          <!-- Open Graph -->
-          <meta property="og:url" content="<%= url %>" />
-          <meta property="og:title" content="<%= title %>" />
-          <meta property="og:description" content="<%= description %>" />
-          <meta property="og:image" content="<%= url %>images/ogp.png" />
+  <!-- Open Graph -->
+  <meta property="og:url" content="<%= url %>" />
+  <meta property="og:title" content="<%= title %>" />
+  <meta property="og:description" content="<%= description %>" />
+  <meta property="og:image" content="<%= url %>images/ogp.png" />
 
-          <!-- Twitter -->
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="@JPWebSolutionsCA" />
-          <meta name="twitter:creator" content="@JPWebSolutionsCA" />
-          <meta name="twitter:title" content="<%= title %>" />
-          <meta name="twitter:description" content="<%= description %>" />
-          <meta name="twitter:image" content="<%= url %>images/ogp.png" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@JPWebSolutionsCA" />
+  <meta name="twitter:creator" content="@JPWebSolutionsCA" />
+  <meta name="twitter:title" content="<%= title %>" />
+  <meta name="twitter:description" content="<%= description %>" />
+  <meta name="twitter:image" content="<%= url %>images/ogp.png" />
 
-          <!-- schema.org -->
-          <script type="application/ld+json">
-            {
-              "@context": "http://schema.org",
-              "@type": "WebPage",
-              "mainEntityOfPage":{
-                "@type":"WebPage",
-                "@id":"<%= url %>"
-              },
-              "headline":"<%= title %>",
-              "image": ["<%= url %>images/ogp.png"],
-              "datePublished": "2020-10-23T10:30:00+01:00",
-              "dateModified": "2021-03-12T10:30:00+01:00",
-              "author": {
-                "@type": "Organization",
-                "name": "Yuki Sato, Ayumi Takahashi"
-              },
-              "publisher": {
-                "@type": "Organization",
-                "name": "JP Web Solutions",
-                "logo": {
-                  "@type": "ImageObject",
-                  "url": "<%= url %>images/ogp.png"
-                }
-              },
-              "description": "<%= description %>"
-            }
-            </script>
+  <!-- schema.org -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebPage",
+      "mainEntityOfPage":{
+        "@type":"WebPage",
+        "@id":"<%= url %>"
+      },
+      "headline":"<%= title %>",
+      "image": ["<%= url %>images/ogp.png"],
+      "datePublished": "2020-10-23T10:30:00+01:00",
+      "dateModified": "2021-03-12T10:30:00+01:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Yuki Sato, Ayumi Takahashi"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "JP Web Solutions",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "<%= url %>images/ogp.png"
+        }
+      },
+      "description": "<%= description %>"
+    }
+  </script>
 
-          <!-- Web Fonts -->
-          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" class="webfont" />
-          <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" class="webfont">
+  <!-- Web Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" class="webfont" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" class="webfont">
 
-          <!-- CSS -->
-          <%- include('_style'); -%>
+  <!-- CSS -->
+  <%- include('_style'); -%>
 
-            <!-- Global site tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-9N9J9R70W4"></script>
-            <script>
-              window.dataLayer = window.dataLayer || [];
-              function gtag() { dataLayer.push(arguments); }
-              gtag('js', new Date());
-              gtag('config', 'G-9N9J9R70W4');
-            </script>
+  <!-- ReCaptcha v3 -->
+  <script defer src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+    function submitForm(token) {
+      document.getElementById("my-form").submit();
+    }
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9N9J9R70W4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-9N9J9R70W4');
+  </script>
 </head>
 
 <body>
