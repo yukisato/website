@@ -2,47 +2,46 @@
 <html lang="ja">
 
 <head>
-  <!-- Google Tag Manager (head) -->
-  <%- include('_tag_manager', { isInHead: true }); -%>
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <% const title='JP Web Solutions - Web戦略、Webシステム開発、UI/UXデザイン改善、ホームページ制作、SEO対策、ブランディング等、デジタル領域に関する課題は全てお任せください' ; %>
-  <% const description='私たちはクライアントのビジネス成果向上を目的に、ホームページの企画・制作からSEO対策、UI/UXデザイン改善、Webシステム開発等を行うカナダ、バンクーバーのデジタルコンサルティングチームです。'; %>
-  <% const url='https://www.jpweb.ca/' ; %>
+    <% const
+      description='私たちはクライアントのビジネス成果向上を目的に、ホームページの企画・制作からSEO対策、UI/UXデザイン改善、Webシステム開発等を行うカナダ、バンクーバーのデジタルコンサルティングチームです。' ;
+      %>
+      <% const url='https://www.jpweb.ca/' ; %>
 
-  <!-- SEO -->
-  <title>
-    <%= title %>
-  </title>
-  <meta name="description" content="<%= description %>" />
+        <!-- SEO -->
+        <title>
+          <%= title %>
+        </title>
+        <meta name="description" content="<%= description %>" />
 
-  <!-- favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
-  <link rel="manifest" href="/images/favicon/site.webmanifest" />
-  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#e73c7e" />
-  <meta name="msapplication-TileColor" content="#e73c7e" />
-  <meta name="theme-color" content="#e73c7e" />
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="/images/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#e73c7e" />
+        <meta name="msapplication-TileColor" content="#e73c7e" />
+        <meta name="theme-color" content="#e73c7e" />
 
-  <!-- Open Graph -->
-  <meta property="og:url" content="<%= url %>" />
-  <meta property="og:title" content="<%= title %>" />
-  <meta property="og:description" content="<%= description %>" />
-  <meta property="og:image" content="<%= url %>images/ogp.png" />
+        <!-- Open Graph -->
+        <meta property="og:url" content="<%= url %>" />
+        <meta property="og:title" content="<%= title %>" />
+        <meta property="og:description" content="<%= description %>" />
+        <meta property="og:image" content="<%= url %>images/ogp.png" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@JPWebSolutionsCA" />
-  <meta name="twitter:creator" content="@JPWebSolutionsCA" />
-  <meta name="twitter:title" content="<%= title %>" />
-  <meta name="twitter:description" content="<%= description %>" />
-  <meta name="twitter:image" content="<%= url %>images/ogp.png" />
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@JPWebSolutionsCA" />
+        <meta name="twitter:creator" content="@JPWebSolutionsCA" />
+        <meta name="twitter:title" content="<%= title %>" />
+        <meta name="twitter:description" content="<%= description %>" />
+        <meta name="twitter:image" content="<%= url %>images/ogp.png" />
 
-  <!-- schema.org -->
-  <script type="application/ld+json">
+        <!-- schema.org -->
+        <script type="application/ld+json">
     {
       "@context": "http://schema.org",
       "@type": "WebPage",
@@ -70,38 +69,36 @@
     }
   </script>
 
-  <!-- Web Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" class="webfont" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" class="webfont">
+        <!-- Web Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" class="webfont" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" class="webfont">
 
-  <!-- CSS -->
-  <%- include('_style'); -%>
+        <!-- CSS -->
+        <%- include('_style'); -%>
 
-  <!-- ReCaptcha v3 -->
-  <script defer src="https://www.google.com/recaptcha/api.js"></script>
-  <script>
-    function submitForm(token) {
-      document.getElementById("my-form").submit();
-    }
-  </script>
+          <!-- ReCaptcha v3 -->
+          <script defer src="https://www.google.com/recaptcha/api.js"></script>
+          <script>
+            function submitForm(token) {
+              document.getElementById("my-form").submit();
+            }
+          </script>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9N9J9R70W4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-9N9J9R70W4');
-  </script>
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-9N9J9R70W4"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-9N9J9R70W4');
+          </script>
 </head>
 
 <body>
-  <!-- Google Tag Manager (body) -->
-  <%- include('_tag_manager', { isInHead: false }); -%>
-    <header>
-      <nav class="navbar d-flex justify-content-between align-items-center">
-        <h1 class="navbar-brand m-0">JP Web Solutions</h1>
-        <!-- <button
+  <header>
+    <nav class="navbar d-flex justify-content-between align-items-center">
+      <h1 class="navbar-brand m-0">JP Web Solutions</h1>
+      <!-- <button
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
@@ -112,231 +109,231 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button> -->
-        <ul class="nav-list d-none d-sm-flex m-0 p-0">
-          <li class="nav-item">
-            <a data-scroll class="nav-link" href="#about">私たちについて</a>
-          </li>
-          <li class="nav-item">
-            <a data-scroll class="nav-link" href="#service">サービス</a>
-          </li>
-          <li class="nav-item">
-            <a data-scroll class="nav-link" href="#work">事例のご紹介</a>
-          </li>
-          <li class="nav-item">
-            <a data-scroll class="nav-link" href="#testimonial">お客様の声</a>
-          </li>
-          <li class="nav-item">
-            <a data-scroll class="nav-link" href="#contact">お問い合わせ</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+      <ul class="nav-list d-none d-sm-flex m-0 p-0">
+        <li class="nav-item">
+          <a data-scroll class="nav-link" href="#about">私たちについて</a>
+        </li>
+        <li class="nav-item">
+          <a data-scroll class="nav-link" href="#service">サービス</a>
+        </li>
+        <li class="nav-item">
+          <a data-scroll class="nav-link" href="#work">事例のご紹介</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a data-scroll class="nav-link" href="#testimonial">お客様の声</a>
+        </li> -->
+        <li class="nav-item">
+          <a data-scroll class="nav-link" href="#contact">お問い合わせ</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <section id="hero">
-      <div class="hero__inner">
-        <div class="rotating-text">
-          <p class="m-0">
-            <span class="word">ブランディング</span>
-            <span class="word">Web戦略</span>
-            <span class="word">Webシステム開発</span>
-            <span class="word">UI/UXデザイン改善</span>
-            <span class="word">ホームページ制作</span>
-            <span class="word">SEO対策</span>
-          </p>
-        </div>
-        <p class="mt-5 hero__tagline text-center">
-          デジタル領域に関する課題は<br class="d-sm-none" />全てお任せください
+  <section id="hero">
+    <div class="hero__inner">
+      <div class="rotating-text">
+        <p class="m-0">
+          <span class="word">ブランディング</span>
+          <span class="word">Web戦略</span>
+          <span class="word">Webシステム開発</span>
+          <span class="word">UI/UXデザイン改善</span>
+          <span class="word">ホームページ制作</span>
+          <span class="word">SEO対策</span>
         </p>
-        <div class="hero__btn d-flex justify-content-center">
-          <a data-scroll href="#service" class="btn btn-outline-light btn-lg mx-1 px-4">サービス</a>
-          <a data-scroll href="#work" class="btn btn-outline-light btn-lg mx-1 px-4">事例のご紹介</a>
-        </div>
       </div>
-    </section>
-
-    <section id="about" class="d-flex align-items-center justify-content-center">
-      <div>
-        <div class="container-md">
-          <h2 class="text-center">私たちについて</h2>
-          <p class="my-5 text-lg-center">
-            JP Web Solutions
-            は、お客様それぞれが抱える課題の解決とビジネスの成果向上を目的に、Webシステム開発、ホームページの企画・制作・SEO対策、UI/UXデザイン改善サービスを提供する、カナダを拠点としたデジタルコンサルティンググループです。
-          </p>
-        </div>
-        <div class="container">
-          <div class="member__container">
-            <div class="member__item">
-              <div class="member__image">
-                <picture>
-                  <source srcset="./images/yuki.webp" type="image/webp" />
-                  <source srcset="./images/yuki.jpg" type="image/jpg" />
-                  <img loading="lazy" src="./images/yuki.jpg" alt="佐藤 悠貴 Chief Web Consultant / Tech Leader">
-                </picture>
-              </div>
-              <h3 class="text-center">
-                佐藤 悠貴
-                <small class="d-block">Chief Web Consultant / Tech Leader</small>
-              </h3>
-              <p>
-                2016年、30歳でカナダに渡る。10年以上の開発経験やゼロからのプロジェクト企画・立ち上げ・運用のノウハウをより多くのお客様に役立てたいと思いたち、JP Web Solutions を設立する。
-              </p>
-            </div>
-            <div class="member__item">
-              <div class="member__image">
-                <picture>
-                  <source srcset="./images/ayumi.webp" type="image/webp" />
-                  <source srcset="./images/ayumi.jpg" type="image/jpg" />
-                  <img loading="lazy" src="./images/ayumi.jpg" alt="高橋 あゆみ Creative Director">
-                </picture>
-              </div>
-              <h3 class="text-center">
-                高橋 あゆみ
-                <small class="d-block">Creative Director</small>
-              </h3>
-              <p>
-                日本とカナダで10年以上の経験を持つUI/UXデザイナー。多種多様な業種のクライアントとデザイナー及びコンサルタントとして働いてきた実績を活かし、佐藤と共に JP
-                Web Solutions を設立する。
-                <!-- 日本のデザイン会社やITベンチャー企業にて、リードデザイナー/アートディレクターとして、多種多様な業種のWebサイト/アプリケーション制作に携わる。2015年からカナダへ移住し、フリーランスを経て、共に JP
-              Web Solutions を設立する。 -->
-              </p>
-            </div>
-          </div>
-        </div>
+      <p class="mt-5 hero__tagline text-center">
+        デジタル領域に関する課題は<br class="d-sm-none" />全てお任せください
+      </p>
+      <div class="hero__btn d-flex justify-content-center">
+        <a data-scroll href="#service" class="btn btn-outline-light btn-lg mx-1 px-4">サービス</a>
+        <a data-scroll href="#work" class="btn btn-outline-light btn-lg mx-1 px-4">事例のご紹介</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="service">
+  <section id="about" class="d-flex align-items-center justify-content-center">
+    <div>
       <div class="container-md">
-        <h2 class="text-center">サービス</h2>
+        <h2 class="text-center">私たちについて</h2>
         <p class="my-5 text-lg-center">
-          デジタル領域に関する課題は全て私たちにお任せください。<br />事業戦略提案から企画立案、ホームページ制作、マーケティング戦略、施策実行、効果検証に至る一連のコンサルティングを、成果にこだわった事業会社目線でご提供いたします。
+          JP Web Solutions
+          は、お客様それぞれが抱える課題の解決とビジネスの成果向上を目的に、Webシステム開発、ホームページの企画・制作・SEO対策、UI/UXデザイン改善サービスを提供する、カナダを拠点としたデジタルコンサルティンググループです。
         </p>
       </div>
       <div class="container">
-        <div class="service__list">
-          <div class="service__item">
-            <div class="service__image">
-              <img loading="lazy" src="./images/strategy.svg" alt="Web戦略">
-            </div>
-            <h3 class="text-center">Web戦略</h3>
-            <p>
-              それらしいホームページを用意するだけでは成果は何も変わりません。私たちはビジネス向上のためのWeb戦略をご提供いたします。
-            </p>
-          </div>
-          <div class="service__item">
-            <div class="service__image">
-              <img loading="lazy" src="./images/development.svg" alt="Webシステム開発">
-            </div>
-            <h3 class="text-center">Webシステム開発</h3>
-            <p>
-              アジャイル開発を基本とし、ニーズに合わせて柔軟でスピーディに、高品質でセキュアなシステム構築を行います。
-            </p>
-          </div>
-          <div class="service__item">
-            <div class="service__image">
-              <img loading="lazy" src="./images/design.svg" alt="UI/UXデザイン改善">
-            </div>
-            <h3 class="text-center">UI/UXデザイン改善</h3>
-            <p>
-              Webユーザビリティ改善を中心に専門的な視点で売上アップに直結する効果の高い具体的なユーザー体験向上施策をご提供します。
-            </p>
-          </div>
-          <div class="service__item">
-            <div class="service__image">
-              <img loading="lazy" src="./images/homepage.svg" alt="ホームページ制作">
-            </div>
-            <h3 class="text-center">ホームページ制作</h3>
-            <p>
-              あなたのビジネスに必要なWebサイトの企画、制作、プロデュース等を行います。目的を徹底追求し最大の効果を目指します。
-            </p>
-          </div>
-          <div class="service__item">
-            <div class="service__image">
-              <img loading="lazy" src="./images/seo.svg" alt="SEO対策">
-            </div>
-            <h3 class="text-center">SEO対策</h3>
-            <p>
-              検索エンジンに上位表示されるための正しい手法や分析、顧客を多く呼び込むためのコンテンツマーケティング施策をご提供します。
-            </p>
-          </div>
-          <div class="service__item">
-            <div class="service__image">
-              <img loading="lazy" src="./images/branding.svg" alt="ブランディング">
-            </div>
-            <h3 class="text-center">ブランディング</h3>
-            <p>
-              単にロゴをデザインするだけでなく、利用する人、サービスを提供する人にとっての価値向上を目指します。
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="work">
-
-      <div class="canada-school">
-        <div class="canada-school-image lazy-background work__bg d-flex align-items-center">
-          <div class="container py-5 d-md-flex">
-            <div class="order-sm-2 work__image text-center">
-              <picture class="d-md-none">
-                <source srcset="./images/canada-school.webp" type="image/webp" />
-                <source srcset="./images/canada-school.png" type="image/png" />
-                <img loading="lazy" src="./images/canada-school.png" alt="カナダ留学コンパス">
+        <div class="member__container">
+          <div class="member__item">
+            <div class="member__image">
+              <picture>
+                <source srcset="./images/yuki.webp" type="image/webp" />
+                <source srcset="./images/yuki.jpg" type="image/jpg" />
+                <img loading="lazy" src="./images/yuki.jpg" alt="佐藤 悠貴 Chief Web Consultant / Tech Leader">
               </picture>
             </div>
-            <div class="order-sm-1 work__text">
-              <p class="featured-project d-inline-block small text-white px-2 font-weight-bold">Featured Project 1</p>
-              <h2 class="mb-3 font-weight-bold">カナダ留学コンパス</h2>
-              <ul class="mb-4 work__list">
-                <li><span>トップページデザインリニューアル</span></li>
-                <li><span>HTML/CSS/Wordpress構造の見直し</span></li>
-                <li><span>サイト速度/SEO改善</span></li>
-                <li><span>仕事探し掲示版システム開発</span></li>
-                <li><span>学校口コミ評価システム開発</span></li>
-                <li><span>サーバー/ドメイン移行</span></li>
-                <li><span>セキュリティ強化</span></li>
-              </ul>
-              <a href="https://canada-school.com/" target="_blank" rel="noopener noreferrer"
-                class="btn btn-outline-dark btn-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-                このWebサイトを見る
-              </a>
-            </div>
+            <h3 class="text-center">
+              佐藤 悠貴
+              <small class="d-block">Chief Web Consultant / Tech Leader</small>
+            </h3>
+            <p>
+              2016年、30歳でカナダに渡る。10年以上の開発経験やゼロからのプロジェクト企画・立ち上げ・運用のノウハウをより多くのお客様に役立てたいと思いたち、JP Web Solutions を設立する。
+            </p>
           </div>
-        </div>
-      </div>
-
-      <div class="compass-management">
-        <div class="compass-management-image lazy-background work__bg d-flex align-items-center">
-          <div class="container py-5 d-md-flex">
-            <div class="work__image text-center">
-              <picture class="d-md-none">
-                <source srcset="./images/compass-management.webp" type="image/webp" />
-                <source srcset="./images/compass-management.png" type="image/png" />
-                <img loading="lazy" src="./images/compass-management.png" alt="管理票ツール" />
+          <div class="member__item">
+            <div class="member__image">
+              <picture>
+                <source srcset="./images/ayumi.webp" type="image/webp" />
+                <source srcset="./images/ayumi.jpg" type="image/jpg" />
+                <img loading="lazy" src="./images/ayumi.jpg" alt="高橋 あゆみ Creative Director">
               </picture>
             </div>
-            <div class="work__text">
-              <p class="featured-project d-inline-block small px-2 font-weight-bold">Featured Project 2</p>
-              <h2 class="mb-3 font-weight-bold text-white">管理票ツール</h2>
-              <ul class="mb-4 work__list">
-                <li><span>社内独自のBIツール開発</span></li>
-                <li><span>Webアプリケーションデザイン</span></li>
-              </ul>
-            </div>
+            <h3 class="text-center">
+              高橋 あゆみ
+              <small class="d-block">Creative Director</small>
+            </h3>
+            <p>
+              日本とカナダで10年以上の経験を持つUI/UXデザイナー。多種多様な業種のクライアントとデザイナー及びコンサルタントとして働いてきた実績を活かし、佐藤と共に JP
+              Web Solutions を設立する。
+              <!-- 日本のデザイン会社やITベンチャー企業にて、リードデザイナー/アートディレクターとして、多種多様な業種のWebサイト/アプリケーション制作に携わる。2015年からカナダへ移住し、フリーランスを経て、共に JP
+              Web Solutions を設立する。 -->
+            </p>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- <div class="container pb-5 pt-2">
+  <section id="service">
+    <div class="container-md">
+      <h2 class="text-center">サービス</h2>
+      <p class="my-5 text-lg-center">
+        デジタル領域に関する課題は全て私たちにお任せください。<br />事業戦略提案から企画立案、ホームページ制作、マーケティング戦略、施策実行、効果検証に至る一連のコンサルティングを、成果にこだわった事業会社目線でご提供いたします。
+      </p>
+    </div>
+    <div class="container">
+      <div class="service__list">
+        <div class="service__item">
+          <div class="service__image">
+            <img loading="lazy" src="./images/strategy.svg" alt="Web戦略">
+          </div>
+          <h3 class="text-center">Web戦略</h3>
+          <p>
+            それらしいホームページを用意するだけでは成果は何も変わりません。私たちはビジネス向上のためのWeb戦略をご提供いたします。
+          </p>
+        </div>
+        <div class="service__item">
+          <div class="service__image">
+            <img loading="lazy" src="./images/development.svg" alt="Webシステム開発">
+          </div>
+          <h3 class="text-center">Webシステム開発</h3>
+          <p>
+            アジャイル開発を基本とし、ニーズに合わせて柔軟でスピーディに、高品質でセキュアなシステム構築を行います。
+          </p>
+        </div>
+        <div class="service__item">
+          <div class="service__image">
+            <img loading="lazy" src="./images/design.svg" alt="UI/UXデザイン改善">
+          </div>
+          <h3 class="text-center">UI/UXデザイン改善</h3>
+          <p>
+            Webユーザビリティ改善を中心に専門的な視点で売上アップに直結する効果の高い具体的なユーザー体験向上施策をご提供します。
+          </p>
+        </div>
+        <div class="service__item">
+          <div class="service__image">
+            <img loading="lazy" src="./images/homepage.svg" alt="ホームページ制作">
+          </div>
+          <h3 class="text-center">ホームページ制作</h3>
+          <p>
+            あなたのビジネスに必要なWebサイトの企画、制作、プロデュース等を行います。目的を徹底追求し最大の効果を目指します。
+          </p>
+        </div>
+        <div class="service__item">
+          <div class="service__image">
+            <img loading="lazy" src="./images/seo.svg" alt="SEO対策">
+          </div>
+          <h3 class="text-center">SEO対策</h3>
+          <p>
+            検索エンジンに上位表示されるための正しい手法や分析、顧客を多く呼び込むためのコンテンツマーケティング施策をご提供します。
+          </p>
+        </div>
+        <div class="service__item">
+          <div class="service__image">
+            <img loading="lazy" src="./images/branding.svg" alt="ブランディング">
+          </div>
+          <h3 class="text-center">ブランディング</h3>
+          <p>
+            単にロゴをデザインするだけでなく、利用する人、サービスを提供する人にとっての価値向上を目指します。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+
+    <div class="canada-school">
+      <div class="canada-school-image lazy-background work__bg d-flex align-items-center">
+        <div class="container py-5 d-md-flex">
+          <div class="order-sm-2 work__image text-center">
+            <picture class="d-md-none">
+              <source srcset="./images/canada-school.webp" type="image/webp" />
+              <source srcset="./images/canada-school.png" type="image/png" />
+              <img loading="lazy" src="./images/canada-school.png" alt="カナダ留学コンパス">
+            </picture>
+          </div>
+          <div class="order-sm-1 work__text">
+            <p class="featured-project d-inline-block small text-white px-2 font-weight-bold">Featured Project 1</p>
+            <h2 class="mb-3 font-weight-bold">カナダ留学コンパス</h2>
+            <ul class="mb-4 work__list">
+              <li><span>トップページデザインリニューアル</span></li>
+              <li><span>HTML/CSS/Wordpress構造の見直し</span></li>
+              <li><span>サイト速度/SEO改善</span></li>
+              <li><span>仕事探し掲示版システム開発</span></li>
+              <li><span>学校口コミ評価システム開発</span></li>
+              <li><span>サーバー/ドメイン移行</span></li>
+              <li><span>セキュリティ強化</span></li>
+            </ul>
+            <a href="https://canada-school.com/" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline-dark btn-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              このWebサイトを見る
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="compass-management">
+      <div class="compass-management-image lazy-background work__bg d-flex align-items-center">
+        <div class="container py-5 d-md-flex">
+          <div class="work__image text-center">
+            <picture class="d-md-none">
+              <source srcset="./images/compass-management.webp" type="image/webp" />
+              <source srcset="./images/compass-management.png" type="image/png" />
+              <img loading="lazy" src="./images/compass-management.png" alt="管理票ツール" />
+            </picture>
+          </div>
+          <div class="work__text">
+            <p class="featured-project d-inline-block small px-2 font-weight-bold">Featured Project 2</p>
+            <h2 class="mb-3 font-weight-bold text-white">管理票ツール</h2>
+            <ul class="mb-4 work__list">
+              <li><span>社内独自のBIツール開発</span></li>
+              <li><span>Webアプリケーションデザイン</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container pb-5 pt-2">
         <p class="small">※事例の一部を掲載しています</p>
       </div> -->
-    </section>
+  </section>
 
-    <!--
+  <!--
     <section id="testimonial" class="pt-5">
       <div class="container-md">
 
@@ -392,113 +389,111 @@
     </section>
   -->
 
-    <section id="contact" class="d-flex align-items-center">
-      <div class="container-md">
-        <h2 class="mb-5 text-center">お問い合わせ</h2>
-        <p class="mb-5">
-          Web関係のことでお困りでしたら、ぜひ私たちにお悩みをお聞かせ下さい。<br>メールでやとりさせて頂いた後、ZoomやSkypeなどお客様に合わせた方法でオンラインミーティングを設定させていただきます。<br>ご予算に合わせた制作・改修・運用などもご提案できますので、まずはお気軽にお問い合わせ下さい。
-        </p>
-        <form id="my-form" action="https://formspree.io/f/xpzodybb" method="POST">
-          <div class="form-group">
-            <label for="contact-name">お名前</label>
-            <input type="text" class="form-control" id="contact-name" name="name" />
-          </div>
-          <div class="form-group">
-            <label for="contact-email">メールアドレス</label>
-            <input type="email" class="form-control" id="contact-email" name="email" />
-          </div>
-          <div class="form-group">
-            <label for="contact-message">お問い合わせ内容</label>
-            <textarea class="form-control" name="message" id="contact-message" rows="5"></textarea>
-          </div>
-          <div class="text-center my-5">
-            <button id="my-form-button" class="g-recaptcha btn btn-lg btn-primary"
-              data-sitekey="6LcQrHsaAAAAAIJuuvHgxyPLFpDEvgzfkK7QJOj3"
-              data-callback='submitForm'
-              data-action='submit'>
-              送信する
-            </button>
-          </div>
-          <div id="my-form-status"></div>
-        </form>
-      </div>
-    </section>
-
-    <footer class="text-center">
-      <a href="#" data-toggle="modal" data-target="#modalPrivacyPolicy">
-        プライバシーポリシー
-      </a>
-      <p>©
-        <span id="copyright-year"></span> JP Web Solutions
+  <section id="contact" class="d-flex align-items-center">
+    <div class="container-md">
+      <h2 class="mb-5 text-center">お問い合わせ</h2>
+      <p class="mb-5">
+        Web関係のことでお困りでしたら、ぜひ私たちにお悩みをお聞かせ下さい。<br>メールでやとりさせて頂いた後、ZoomやSkypeなどお客様に合わせた方法でオンラインミーティングを設定させていただきます。<br>ご予算に合わせた制作・改修・運用などもご提案できますので、まずはお気軽にお問い合わせ下さい。
       </p>
-    </footer>
-
-    <div class="modal fade" id="modalPrivacyPolicy">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+      <form id="my-form" action="https://formspree.io/f/xpzodybb" method="POST">
+        <div class="form-group">
+          <label for="contact-name">お名前</label>
+          <input type="text" class="form-control" id="contact-name" name="name" />
+        </div>
+        <div class="form-group">
+          <label for="contact-email">メールアドレス</label>
+          <input type="email" class="form-control" id="contact-email" name="email" />
+        </div>
+        <div class="form-group">
+          <label for="contact-message">お問い合わせ内容</label>
+          <textarea class="form-control" name="message" id="contact-message" rows="5"></textarea>
+        </div>
+        <div class="text-center my-5">
+          <button id="my-form-button" class="g-recaptcha btn btn-lg btn-primary"
+            data-sitekey="6LcQrHsaAAAAAIJuuvHgxyPLFpDEvgzfkK7QJOj3" data-callback='submitForm' data-action='submit'>
+            送信する
           </button>
-          <div class="modal-body">
-            <h2 class="text-center mb-5">プライバシーポリシー</h2>
-            <p>
-              ウェブサイトは、JP Web Solutions（以下「私たち」）の事業内容等を紹介するサイトです。
-            </p>
-            <h3>個人情報保護方針</h3>
-            <p>
-              私たちは、以下のとおり個人情報保護方針を定め、個人情報保護の仕組みを構築し、全従業員に個人情報保護の重要性の認識と取組みを徹底させることにより、個人情報の保護を推進致します。
-            </p>
-            <h3>個人情報の管理</h3>
-            <p>
-              私たちは、お客さまの個人情報を正確かつ最新の状態に保ち、個人情報への不正アクセス・紛失・破損・改ざん・漏洩などを防止するため、セキュリティシステムの維持・管理体制の整備・社員教育の徹底等の必要な措置を講じ、安全対策を実施し個人情報の厳重な管理を行ないます。
-            </p>
-            <h3>個人情報の利用目的</h3>
-            <p>
-              お客さまからお預かりした個人情報は、私たちからのご連絡や業務のご案内やご質問に対する回答として、電子メールや資料のご送付に利用いたします。>本ウェブサイトでは、お客様からのお問い合わせ時に、お名前、e-mailアドレス、電話番号等の個人情報をご登録いただく場合がございますが、これらの個人情報はご提供いただく際の目的以外では利用いたしません。<br />お客さまからお預かりした個人情報は、私たちからのご連絡や業務のご案内やご質問に対する回答として、電子メールや資料のご送付に利用いたします。
-            </p>
-            <h3>個人情報の第三者への開示・提供の禁止</h3>
-            <p>
-              私たちは、お客さまよりお預かりした個人情報を適切に管理し、次のいずれかに該当する場合を除き、個人情報を第三者に開示いたしません。
-            </p>
-            <ul>
-              <li>お客さまの同意がある場合</li>
-              <li>
-                お客さまが希望されるサービスを行なうために私たちが業務を委託する業者に対して開示する場合
-              </li>
-              <li>法令に基づき開示することが必要である場合</li>
-            </ul>
-            <h3>個人情報の安全対策</h3>
-            <p>
-              私たちは、個人情報の正確性及び安全性確保のために、セキュリティに万全の対策を講じています。
-            </p>
-            <h3>ご本人の照会</h3>
-            <p>
-              お客さまがご本人の個人情報の照会・修正・削除などをご希望される場合には、ご本人であることを確認の上、対応させていただきます。
-            </p>
-            <h3>法令、規範の遵守と見直し</h3>
-            <p>
-              私たちは、保有する個人情報に関して適用される日本の法令、その他規範を遵守するとともに、本ポリシーの内容を適宜見直し、その改善に努めます。
-            </p>
-            <h3>お問い合せ</h3>
-            <p>
-              私たちの個人情報の取扱に関するお問い合せは、メールフォームにてご連絡ください。
-            </p>
-          </div>
+        </div>
+        <div id="my-form-status"></div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <a href="#" data-toggle="modal" data-target="#modalPrivacyPolicy">
+      プライバシーポリシー
+    </a>
+    <p>©
+      <span id="copyright-year"></span> JP Web Solutions
+    </p>
+  </footer>
+
+  <div class="modal fade" id="modalPrivacyPolicy">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-body">
+          <h2 class="text-center mb-5">プライバシーポリシー</h2>
+          <p>
+            ウェブサイトは、JP Web Solutions（以下「私たち」）の事業内容等を紹介するサイトです。
+          </p>
+          <h3>個人情報保護方針</h3>
+          <p>
+            私たちは、以下のとおり個人情報保護方針を定め、個人情報保護の仕組みを構築し、全従業員に個人情報保護の重要性の認識と取組みを徹底させることにより、個人情報の保護を推進致します。
+          </p>
+          <h3>個人情報の管理</h3>
+          <p>
+            私たちは、お客さまの個人情報を正確かつ最新の状態に保ち、個人情報への不正アクセス・紛失・破損・改ざん・漏洩などを防止するため、セキュリティシステムの維持・管理体制の整備・社員教育の徹底等の必要な措置を講じ、安全対策を実施し個人情報の厳重な管理を行ないます。
+          </p>
+          <h3>個人情報の利用目的</h3>
+          <p>
+            お客さまからお預かりした個人情報は、私たちからのご連絡や業務のご案内やご質問に対する回答として、電子メールや資料のご送付に利用いたします。>本ウェブサイトでは、お客様からのお問い合わせ時に、お名前、e-mailアドレス、電話番号等の個人情報をご登録いただく場合がございますが、これらの個人情報はご提供いただく際の目的以外では利用いたしません。<br />お客さまからお預かりした個人情報は、私たちからのご連絡や業務のご案内やご質問に対する回答として、電子メールや資料のご送付に利用いたします。
+          </p>
+          <h3>個人情報の第三者への開示・提供の禁止</h3>
+          <p>
+            私たちは、お客さまよりお預かりした個人情報を適切に管理し、次のいずれかに該当する場合を除き、個人情報を第三者に開示いたしません。
+          </p>
+          <ul>
+            <li>お客さまの同意がある場合</li>
+            <li>
+              お客さまが希望されるサービスを行なうために私たちが業務を委託する業者に対して開示する場合
+            </li>
+            <li>法令に基づき開示することが必要である場合</li>
+          </ul>
+          <h3>個人情報の安全対策</h3>
+          <p>
+            私たちは、個人情報の正確性及び安全性確保のために、セキュリティに万全の対策を講じています。
+          </p>
+          <h3>ご本人の照会</h3>
+          <p>
+            お客さまがご本人の個人情報の照会・修正・削除などをご希望される場合には、ご本人であることを確認の上、対応させていただきます。
+          </p>
+          <h3>法令、規範の遵守と見直し</h3>
+          <p>
+            私たちは、保有する個人情報に関して適用される日本の法令、その他規範を遵守するとともに、本ポリシーの内容を適宜見直し、その改善に努めます。
+          </p>
+          <h3>お問い合せ</h3>
+          <p>
+            私たちの個人情報の取扱に関するお問い合せは、メールフォームにてご連絡ください。
+          </p>
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
-    <%- include('_script'); -%>
+  <%- include('_script'); -%>
 </body>
 
 </html>
